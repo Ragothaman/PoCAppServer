@@ -3,7 +3,6 @@ package com.shop.server.persistence;
 import java.util.List;
 
 import com.shop.server.model.Contacts;
-import com.shop.server.vo.ContactVo;
 
 public interface ContactDetailDao {
 

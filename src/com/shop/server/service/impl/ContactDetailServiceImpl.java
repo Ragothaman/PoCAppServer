@@ -7,10 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.shop.server.model.Contacts;
-import com.shop.server.model.OrderDetails;
-import com.shop.server.model.Products;
 import com.shop.server.persistence.ContactDetailDao;
-import com.shop.server.persistence.UserDetailsDao;
 import com.shop.server.service.ContactDetailService;
 import com.shop.server.vo.ContactVo;
 

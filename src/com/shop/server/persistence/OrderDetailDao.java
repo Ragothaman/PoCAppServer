@@ -1,12 +1,12 @@
 package com.shop.server.persistence;
 
-import com.shop.server.model.OrderDetails;
+import com.shop.server.model.Order;
 
 
 public interface OrderDetailDao {
 	
-	public boolean insertOrder(OrderDetails order);
-	public OrderDetails getOrderDetailbyId(String trackingNumber);
+	public void insertOrder(Order order);
+	public Order getOrderDetailbyId(String trackingNumber);
 
 
 }

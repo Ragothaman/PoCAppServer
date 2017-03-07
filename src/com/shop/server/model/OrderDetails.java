@@ -63,6 +63,7 @@ public class OrderDetails {
 		this.trackingno = trackingno;
 	}
 	
+	
 //	@OneToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "productid")
 //	public Products getProducts() {
