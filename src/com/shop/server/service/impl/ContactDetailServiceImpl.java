@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.shop.server.model.Contacts;
+import com.shop.server.model.OrderDetails;
 import com.shop.server.model.Products;
 import com.shop.server.persistence.ContactDetailDao;
 import com.shop.server.persistence.UserDetailsDao;
@@ -21,20 +22,26 @@ public class ContactDetailServiceImpl implements ContactDetailService {
 	private ContactDetailDao contactDetailDao;
 	@Override
 	public List<Contacts> getAllContacts() {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("getAllContacts in ContactDetailServiceImpl starts");
+		List<Contacts> contacts = contactDetailDao.getAllContacts();
+		System.out.println("getOrderDetailbyId in OrderDetailServiceImpl ends");
+		return contacts;
 	}
 
 	@Override
-	public Contacts getContactById(int productid) {
-		// TODO Auto-generated method stub
-		return null;
+	public Contacts getContactById(int contactid) {
+		System.out.println("getContactById in ContactDetailServiceImpl starts");
+		Contacts contacts = contactDetailDao.getContactById(contactid);
+		System.out.println("getContactById in OrderDetailServiceImpl ends");
+		return contacts;
 	}
 
 	@Override
 	public Contacts getContactByName(String contactName) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("getContactByName in ContactDetailServiceImpl starts");
+		Contacts contacts = contactDetailDao.getContactByName(contactName);
+		System.out.println("getContactByName in OrderDetailServiceImpl ends");
+		return contacts;
 	}
 
 	@Override
