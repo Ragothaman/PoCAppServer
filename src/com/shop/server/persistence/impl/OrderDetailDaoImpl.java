@@ -5,7 +5,6 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.shop.server.model.Contacts;
 import com.shop.server.model.OrderDetails;
 import com.shop.server.persistence.AbstractDao;
 import com.shop.server.persistence.OrderDetailDao;
@@ -25,6 +24,7 @@ public class OrderDetailDaoImpl extends AbstractDao implements OrderDetailDao{
 			}
 			catch(Exception e)
 			{
+				e.printStackTrace();
 				return false;
 			}
 		}

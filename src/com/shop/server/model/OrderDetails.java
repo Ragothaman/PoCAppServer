@@ -1,11 +1,10 @@
 package com.shop.server.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -13,17 +12,26 @@ import javax.persistence.Table;
 public class OrderDetails {
 
 	@Id
-	@Column(name="productid", unique=true, nullable=false)
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@Column(name="orderid", unique=true, nullable=false)
+	private int orderid;
+	@Column(name="productid", unique=false, nullable=false)
 	private int productid;
-	@Column(name="contactid", unique=true, nullable=false)
+	@Column(name="contactid", unique=false, nullable=false)
 	private int contactid;
-	@Column(name="qty", unique=true, nullable=false)
+	@Column(name="qty", unique=false, nullable=false)
 	private int qty;
-	@Column(name="price", unique=true, nullable=false)
+	@Column(name="price", unique=false, nullable=false)
 	private int price;
-	@Column(name="trackingno", unique=true, nullable=false)
+	@Column(name="trackingno", unique=false, nullable=false)
 	private String trackingno;
 	
+	public int getOrderid() {
+		return orderid;
+	}
+	public void setOrderid(int orderid) {
+		this.orderid = orderid;
+	}
 	public int getProductid() {
 		return productid;
 	}

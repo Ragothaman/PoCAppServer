@@ -3,6 +3,13 @@ package com.shop.server.vo;
 
 
 public class OrderVo {
+	private int orderid;
+	public int getOrderid() {
+		return orderid;
+	}
+	public void setOrderid(int orderid) {
+		this.orderid = orderid;
+	}
 	private int productid;
 	private int contactid;
 	private int qty;

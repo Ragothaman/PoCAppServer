@@ -42,7 +42,7 @@ public class OrderController {
 	}
 	
 	@RequestMapping(value = "/order/getOrderDetail", method = RequestMethod.POST)
-	public ResponseEntity<OrderDetails> insertOrder(@RequestBody String trackingNumber) {
+	public ResponseEntity<OrderDetails> getOrderDetails(@RequestBody String trackingNumber) {
 		System.out.println("getOrderDetail ");
 		OrderDetails result = orderDetailService.getOrderDetailbyId(trackingNumber);
 		return new ResponseEntity<OrderDetails>(result, HttpStatus.OK);

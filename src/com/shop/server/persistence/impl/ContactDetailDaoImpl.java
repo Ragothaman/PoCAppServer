@@ -8,11 +8,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.shop.server.model.Contacts;
-import com.shop.server.model.Products;
-import com.shop.server.model.UserDetails;
 import com.shop.server.persistence.AbstractDao;
 import com.shop.server.persistence.ContactDetailDao;
-import com.shop.server.vo.ContactVo;
 
 @Repository(value = "ContactDetailDao")
 @Transactional
